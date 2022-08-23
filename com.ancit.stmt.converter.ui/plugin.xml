@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.ancit.stmt.converter.ui.views.StatementView"
+            id="com.ancit.stmt.converter.ui.views.StatementView"
+            name="Statement View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.ancit.stmt.converter.ui.perspectives.StatementConverterPerspective"
+            id="com.ancit.stmt.converter.ui.perspectives.StatementConverterPerspective"
+            name="CSV Convertor">
+      </perspective>
+   </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+,Account Activity,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+Customer No:,11126788,,,,,,
+Account Number:,1712155000019615,,,,,,
+Account Currency:, INR,,,,,,
+Opening Balance ( Balance B/F ):,"6,212.70",,,,,,
+Closing Balance:,"15,178.70",,,,,,
+,,,,,,,
+,,,,,,,
+"	Transaction Date",Value Date,Branch,Cheque No.,Description,Debit,Credit,Balance
+01/09/2017 2:01,01-Sep-17,1712,,1712.401.814/56:INT PAYOUT,,"13,247.00","15,178.70"
+29/08/2017 13:03,29-Aug-17,1109,2301,ATM CSW/1712029233/KARUR VYSYA BANK/ATTUR,"5,000.00",,"1,931.70"
+29/08/2017 13:02,29-Aug-17,1109,2300,ATM CSW/1712029233/KARUR VYSYA BANK/ATTUR,"10,000.00",,"6,931.70"
+25/08/2017 23:17,27-Aug-17,1712,,1712.401.696/6:INT PAYOUT,,"10,719.00","16,931.70"
+19/08/2017 12:29,19-Aug-17,1712,120,1712503000000398-TD. Payin Casa Xfer.,"2,00,000.00",,"6,212.70"
+19/08/2017 12:10,19-Aug-17,1712, ,Cash Deposit,,"2,00,000.00","2,06,212.70"

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Application
+Bundle-SymbolicName: com.ancit.stmt.application; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ancit.stmt.application.Activator
+Bundle-Vendor: ANCIT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.ancit.stmt.loader.kvb;bundle-version="1.0.0",
+ com.ancit.stmt.loader;bundle-version="1.0.0",
+ com.ancit.stmt.loader.cub;bundle-version="1.0.0",
+ com.ancit.stmt.loader.icici;bundle-version="1.0.0",
+ com.ancit.stmt.libs;bundle-version="1.0.0",
+ com.ancit.stmt.loader.iob;bundle-version="1.0.0",
+ com.ancit.stmt.model;bundle-version="1.0.0",
+ org.eclipse.core.resources;bundle-version="3.8.101",
+ com.ancit.stmt.loader.PNB;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Yesbank
+Bundle-SymbolicName: com.ancit.stmt.loader.yesbank;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ancit.stmt.loader.yesbank.Activator
+Bundle-Vendor: ANCIT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.ancit.stmt.loader,
+ com.ancit.stmt.libs,
+ com.ancit.stmt.model
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

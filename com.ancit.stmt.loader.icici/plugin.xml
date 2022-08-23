@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ancit.stmt.loader.parser">
+      <parser
+            bank_name="ICICI Corporate"
+            class="com.ancit.stmt.loader.icici.ICICICorporateStatementParser">
+      </parser>
+      <parser
+            bank_name="ICICI Savings"
+            class="com.ancit.stmt.loader.icici.ICICISavingStatementParser">
+      </parser>
+   </extension>
+
+</plugin>

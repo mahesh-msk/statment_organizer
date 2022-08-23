@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubi
+Bundle-SymbolicName: com.ancit.stmt.loader.ubi;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ancit.stmt.loader.ubi.Activator
+Bundle-Vendor: ANCIT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.ancit.stmt.libs;bundle-version="1.0.0",
+ com.ancit.stmt.loader;bundle-version="1.0.0",
+ com.ancit.stmt.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Import-Package: org.apache.poi.hssf.usermodel,
+ org.apache.poi.ss.usermodel

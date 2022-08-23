@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.ancit.stmt.ui.category1"
+            class="com.ancit.stmt.ui.views.StatementView"
+            id="com.ancit.stmt.ui.views.StatementView"
+            name="Statement View"
+            restorable="true">
+      </view>
+      <category
+            id="com.ancit.stmt.ui.category1"
+            name="Statement Manager">
+      </category>
+      <view
+            category="com.ancit.stmt.ui.category1"
+            class="com.ancit.stmt.ui.views.LedgerView"
+            id="com.ancit.stmt.ui.views.LedgerView"
+            name="Ledgers">
+      </view>
+      <view
+            category="com.ancit.stmt.ui.category1"
+            class="com.ancit.stmt.ui.views.LedgerDetailsView"
+            id="com.ancit.stmt.ui.views.LedgerDetailsView"
+            name="Ledger Details View"
+            restorable="true">
+      </view>
+      <view
+            category="com.ancit.stmt.ui.category1"
+            class="com.ancit.stmt.ui.views.UserLedgerView"
+            id="com.ancit.stmt.ui.views.UserLedgerView"
+            name="User Ledger View">
+      </view>
+      <view
+            category="com.ancit.stmt.ui.category1"
+            class="com.ancit.stmt.ui.views.GraphView"
+            id="com.ancit.stmt.ui.views.GraphView"
+            name="Graph"
+            restorable="true">
+      </view>
+      <view
+            class="com.ancit.stmt.ui.views.TallyStatementView"
+            id="com.ancit.stmt.ui.views.TallyStatementView"
+            name="Tally Statement View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.ancit.stmt.ui.perspective.StatementManagerPerspective"
+            id="com.ancit.stmt.ui.perspective.StatementManagerPerspective"
+            name="Statement Manager">
+      </perspective>
+      <perspective
+            class="com.ancit.stmt.ui.perspective.StatementReconciliationPerspective"
+            id="com.ancit.stmt.ui.perspective.StatementReconciliation"
+            name="Statement Reconciliation">
+      </perspective>
+      <perspective
+            class="com.ancit.stmt.ui.perspective.StatementConverterPerspective"
+            id="com.ancit.stmt.ui.perspective.StatementConverterPerspective"
+            name="CSV Generator">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            icon="icons/Taxable.jpg"
+            id="com.ancit.stmt.ui.decorators.TaxableDecorator"
+            label="Taxable"
+            lightweight="true"
+            location="TOP_RIGHT"
+            state="true">
+      </decorator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.ancit.stmt.ui.actionSet1"
+            label="Tally"
+            visible="true">
+         <action
+               class="com.ancit.stmt.ui.action.ConnectToTally"
+               id="com.ancit.stmt.ui.action1"
+               label="Connect To Tally"
+               style="push"
+               toolbarPath="/additions">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

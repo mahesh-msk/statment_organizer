@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ancit.stmt.loader.parser">
+      <parser
+            bank_name="HDFC Bank"
+            class="com.ancit.stmt.loader.hdfc.HDFCBankStatementParser">
+      </parser>
+   </extension>
+
+</plugin>

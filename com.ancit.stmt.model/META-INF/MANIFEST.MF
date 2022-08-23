@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Model
+Bundle-SymbolicName: com.ancit.stmt.model;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ancit.stmt.model.Activator
+Bundle-Vendor: ANCIT
+Require-Bundle: org.eclipse.core.runtime,
+ com.ancit.stmt.loader;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.ancit.stmt.model
+Bundle-ClassPath: lib/itextpdf-5.4.2.jar,
+ .,
+ lib/bcpkix-jdk15on-149.jar,
+ lib/bcprov-jdk15on-149.jar
