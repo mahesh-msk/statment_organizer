@@ -11,7 +11,6 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 
 import com.ancit.stmt.loader.parser.IStatementParser;
@@ -55,7 +54,7 @@ public class IndainStatementPareser implements IStatementParser {
 					// getCellTypeEnum shown as deprecated for version 3.15
 					// getCellTypeEnum ill be renamed to getCellType starting
 					// from version 4.0
-					if (currentCell.getCellType() == CellType.STRING) {
+					if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 						value = currentCell.getStringCellValue().trim();
 
 						if (i == 0) {

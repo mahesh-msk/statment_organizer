@@ -13,7 +13,6 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 
 import com.ancit.stmt.loader.parser.IStatementParser;
@@ -53,7 +52,7 @@ public class UnionBankParser implements IStatementParser{
 						
 						if(flag){
 			            	
-			            	if(cell.getCellType() == CellType.STRING) {
+			            	if(cell.getCellType() == Cell.CELL_TYPE_STRING) {
 			            	if(!cell.getStringCellValue().equals("")){
 			            		
 			            		if(cnt==3){
@@ -68,7 +67,7 @@ public class UnionBankParser implements IStatementParser{
 			            	}else{
 			            		continue;
 			            	}
-			            	} else if(cell.getCellType() == CellType.NUMERIC) {
+			            	} else if(cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 			            		if(cnt==1){
 			            			ent.setSno((int)cell.getNumericCellValue());
 				            			System.out.println("S No: "+cell.getNumericCellValue());
@@ -106,17 +105,17 @@ public class UnionBankParser implements IStatementParser{
 			            			cnt++;
 			            			 entries.add(ent);
 			            		}
-			            	}else if(cell.getCellType()== CellType.BLANK){
+			            	}else if(cell.getCellType()== Cell.CELL_TYPE_BLANK){
 			            		System.out.println(cell.toString());
 			            	}
 			            }
 			            
-			            if(cell.getCellType() == CellType.STRING) {
+			            if(cell.getCellType() == Cell.CELL_TYPE_STRING) {
 			            if(cell.getStringCellValue().equals("Sr No.")){
 			            	flag=true;
 			            	break;
 			            }
-			            }else  if(cell.getCellType() == CellType.BLANK) {
+			            }else  if(cell.getCellType() == Cell.CELL_TYPE_BLANK) {
 				            if(cell.getStringCellValue().equals(null)){
 				            	flag=true;
 				            	break;
