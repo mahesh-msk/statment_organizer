@@ -71,10 +71,8 @@ public class StatementParserWizardPage extends WizardPage {
 				statementParserMap.put(bankName, statementParser);
 			}
 		} catch (InvalidRegistryObjectException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (CoreException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

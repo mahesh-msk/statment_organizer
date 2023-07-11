@@ -6,6 +6,5 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.ancit.stmt.loader.Activator
 Bundle-Vendor: ANCIT
 Require-Bundle: org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Export-Package: com.ancit.stmt.loader.parser

@@ -7,8 +7,7 @@ Bundle-Activator: com.ancit.stmt.loader.kvb.Activator
 Bundle-Vendor: ANCIT
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.ancit.stmt.loader;bundle-version="1.0.0",
- com.ancit.stmt.model;bundle-version="1.0.0",
- com.ancit.stmt.libs;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+ com.ancit.stmt.loader,
+ com.ancit.stmt.model,
+ com.ancit.stmt.libs
 Bundle-ActivationPolicy: lazy

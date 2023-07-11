@@ -10,5 +10,4 @@ Require-Bundle: org.eclipse.ui,
  com.ancit.stmt.loader,
  com.ancit.stmt.libs,
  com.ancit.stmt.model
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy

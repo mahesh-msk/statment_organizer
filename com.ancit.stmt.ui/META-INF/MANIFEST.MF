@@ -7,14 +7,14 @@ Bundle-Activator: com.ancit.stmt.ui.Activator
 Bundle-Vendor: ANCIT
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.ancit.stmt.model;bundle-version="1.0.0",
+ com.ancit.stmt.model,
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.observable,
  org.eclipse.core.databinding.property,
  org.eclipse.jface.databinding,
  com.ibm.icu,
- com.ancit.stmt.loader;bundle-version="1.0.0"
+ com.ancit.stmt.loader
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/jcommon-1.0.21.jar,
  lib/jfreechart-1.0.17-experimental.jar,

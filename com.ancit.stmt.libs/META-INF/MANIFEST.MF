@@ -100,4 +100,3 @@ Export-Package: com.itextpdf.awt,
  org.apache.poi.ss.util,
  org.apache.poi.ss.util.cellwalk,
  org.apache.poi.util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7

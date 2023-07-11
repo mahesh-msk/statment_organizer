@@ -28,6 +28,8 @@ import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 
 public class ICICICorporateStatementParser implements IStatementParser {
 
+	private static final String DD_MM_YYYY = "dd-MM-yyyy";
+
 	public ICICICorporateStatementParser() {
 		// TODO Auto-generated constructor stub
 	}
@@ -79,7 +81,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 							Entry ent = new Entry();
 							ent.setSno(Integer.parseInt(val[0]));
 							try {
-								ent.setDate(new SimpleDateFormat("dd/MM/yyyy").parse(val[2]));
+								ent.setDate(new SimpleDateFormat(DD_MM_YYYY).parse(val[2]));
 							} catch (ParseException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
@@ -103,7 +105,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 							Entry ent = new Entry();
 							ent.setSno(Integer.parseInt(lineWise[j + 1]));
 							try {
-								ent.setDate(new SimpleDateFormat("dd/MM/yyyy").parse(val[1]));
+								ent.setDate(new SimpleDateFormat(DD_MM_YYYY).parse(val[1]));
 							} catch (ParseException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
@@ -158,7 +160,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 					List<Entry> entries = StatementManager.getInstance().getStatement().getEntries();
 
 					Entry entry = new Entry();
-					Date date = new SimpleDateFormat("dd-MM-yyyy").parse(record[2]);
+					Date date = new SimpleDateFormat(DD_MM_YYYY).parse(record[2]);
 					entry.setSno(entries.size() + 1);
 					entry.setAmount(Double.parseDouble(record[7].replace(",", "")));
 					entry.setChequeNo(record[4]);
@@ -215,7 +217,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 						List<Entry> entries = StatementManager.getInstance().getStatement().getEntries();
 
 						Entry entry = new Entry();
-						Date date = new SimpleDateFormat("dd/MM/yyyy").parse(recordSet[2]);
+						Date date = new SimpleDateFormat(DD_MM_YYYY).parse(recordSet[2]);
 						entry.setSno(entries.size() + 1);
 						entry.setAmount(Double.parseDouble(recordSet[7].replace(",", "")));
 						entry.setChequeNo(recordSet[4]);
@@ -234,7 +236,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 						List<Entry> entries = StatementManager.getInstance().getStatement().getEntries();
 
 						Entry entry = new Entry();
-						Date date = new SimpleDateFormat("dd/MM/yyyy").parse(recordSet[2]);
+						Date date = new SimpleDateFormat(DD_MM_YYYY).parse(recordSet[2]);
 						entry.setSno(entries.size() + 1);
 						entry.setAmount(Double.parseDouble(recordSet[6].replace(",", "")));
 
@@ -293,8 +295,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 						value = currentCell.getStringCellValue().trim();
 
 						if (i == 3) {
-
-							ent.setDate(new SimpleDateFormat("dd-MM-yyyy").parse(currentCell.getStringCellValue()));
+							ent.setDate( new SimpleDateFormat(DD_MM_YYYY).parse(currentCell.getStringCellValue()));
 							System.out.print((currentCell.getStringCellValue() + "--"));
 						} 
 						else if (i == 4) {
@@ -312,7 +313,21 @@ public class ICICICorporateStatementParser implements IStatementParser {
 							ent.setDescription(currentCell.getStringCellValue());
 							System.out.print((currentCell.getStringCellValue() + "--"));
 						}
-						
+						else if (i == 6) {
+							Cell nextCell = cellIterator.next();
+							double val = 0;
+							if (nextCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+								val = nextCell.getNumericCellValue();
+							}
+							if (value.contains("CR")) {
+								ent.setAmount(val);
+								System.out.print((nextCell.getNumericCellValue() + "--"));
+							} else {
+								ent.setAmount(-val);
+								System.out.print((nextCell.getNumericCellValue() + "--"));
+							}
+
+						}
 						
 
 					} else if (currentCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
@@ -323,7 +338,7 @@ public class ICICICorporateStatementParser implements IStatementParser {
 							 ent.setChequeNo(nf.format(val));
 							}
 						
-						if (i == 7) {
+						if (i == 6) {
 
 							if (value.contains("CR")) {
 
